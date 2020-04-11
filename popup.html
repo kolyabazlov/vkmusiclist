@@ -1,0 +1,242 @@
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <style type="text/css">
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        width: 200px;
+      }
+      #q1 {
+        z-index: -2;
+        position: fixed;
+        background-color: #f4511e;
+        width: 300px;
+        height: 400px;
+        top: 20px;
+        right: 0;
+      }
+      #q2 {
+        z-index: -2;
+        position: fixed;
+        background-color: #c2185b;
+        width: 160px;
+        height: 220px;
+        top: 0;
+        right: 4px;
+      }
+      #q3 {
+        z-index: -2;
+        position: fixed;
+        background-color: #ffeb3b;
+        width: 160px;
+        height: 100px;
+        right: 51px;
+        top: 4px;
+      }
+      #q4 {
+        z-index: -3;
+        position: fixed;
+        background-color: #f4511e;
+        width: 300px;
+        height: 400px;
+        top: -20px;
+        right: 0;
+      }
+      #q5 {
+        z-index: -1;
+        position: fixed;
+        background-color: #ffeb3b;
+        width: 20px;
+        height: 80px;
+        top: 200px;
+        right: 80px;
+      }
+      #q6 {
+        z-index: -2;
+        position: fixed;
+        background-color: #c2185b;
+        width: 60px;
+        height: 60px;
+        top: 265px;
+        left: 20px;
+      }
+/*      #qextra1 {
+        z-index: -1;
+        position: fixed;
+        background-image: url("img/extra.png");
+        background-size: contain;
+        width: 38px;
+        height: 10px;
+        top: 156px;
+        left: 8px;
+      }
+      #qextra2 {
+        z-index: -1;
+        position: fixed;
+        background-image: url("img/extra.png");
+        background-size: contain;
+        width: 38px;
+        height: 10px;
+        top: 182px;
+        left: 8px;
+      }*/
+      .checkrow {
+        margin-top: 5px;
+        text-align: center;
+        display: flex;
+      }
+      .checkboxText {
+        white-space: nowrap;
+        font-size: 15px;
+        color: #000000;
+        margin-left: 3px;
+      }
+      .pageCheck {
+        width: 21px;
+        height: 21px;
+        background-size: contain;
+        background-image: url("img/icon.png");
+      }
+      .pageCheck_active {
+        width: 21px;
+        height: 21px;
+        background-size: contain;
+        background-image: url("img/checkedicon.png");
+      }
+      .scrollCheck {
+        width: 21px;
+        height: 21px;
+        background-size: contain;
+        background-image: url("img/icon.png");
+      }
+      .scrollCheck_active {
+        width: 21px;
+        height: 21px;
+        background-size: contain;
+        background-image: url("img/checkedicon.png");
+      }
+      #startButton {
+        width: 200px;
+        height: 80px;
+        font-size: 24px;
+        text-align: center;
+        box-shadow: none;
+        outline: none;
+        box-shadow: 2px;
+        border: 3px solid #82b1ff;
+        cursor: pointer;
+        margin-top: 10px;
+        background-color: transparent;
+      }
+      #startButton:hover {
+        background-color: #82b1ff;
+      }
+      .advrow {
+        margin-top: 5px;
+        text-align: center;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .advText {
+        white-space: nowrap;
+        font-size: 15px;
+        color: #000000;
+        margin-right: 3px;
+      }
+      .alphCheck {
+        width: 21px;
+        height: 21px;
+        cursor: pointer;
+        background-size: contain;
+        background-image: url("img/icon.png");
+      }
+      .alphCheck:hover {
+        background-image: url("img/checkedicon.png");
+      }
+      .alphCheck_active {
+        background-image: url("img/checkedicon.png");
+      }
+      .numCheck {
+        width: 21px;
+        height: 21px;
+        cursor: pointer;
+        background-size: contain;
+        background-image: url("img/icon.png");
+      }
+      .numCheck:hover {
+        background-image: url("img/checkedicon.png");
+      }
+      .numCheck_active {
+        background-image: url("img/checkedicon.png");
+      }
+      .about {
+        margin-bottom: 10px;
+      }
+      #faq {
+        margin-top: 10px;
+        padding: 5px;
+        font-size: 15px;
+        color: #000000;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: none;
+        border: 3px solid #00695c;
+        width: 200px;
+        height: 35px;
+      }
+      #faq:hover {
+        background-color: #00695c;
+      }
+      .info {
+        font-size: 15px;
+        margin-top: 10px;
+        display: none;
+        text-align: center;
+      }
+      .info_active {
+        display: block;
+      }
+    </style>
+    <div class="container">
+      <div id="q1"></div>
+      <div id="q2"></div>
+      <div id="q3"></div>
+      <div id="q4"></div>
+      <div id="q5"></div>
+      <div id="q6"></div>
+<!--       <div id="qextra1"></div>
+      <div id="qextra2"></div> -->
+      <div class="checkrow">
+        <div class="pageCheck"></div>
+        <span class="checkboxText">vk music opened</span>
+      </div>
+      <div class="checkrow">
+        <div class="scrollCheck"></div>
+        <span class="checkboxText">scrolled max down</span>
+      </div>
+      <button id='startButton'>START</button>
+      <div class="advrow">
+        <span class="advText">sort alphabetically</span>
+        <div class="alphCheck"></div>
+      </div>
+      <div class="advrow">
+        <span class="advText">show numeration</span>
+        <div class="numCheck"></div>
+      </div>
+      <div class="about">
+        <div id="faq">how to</div>
+        <p class="info">
+          go to vk.com/music <br> click plugin icon <br> scroll maximum down <br> choose extra options <br>click "start" 
+        </p>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/popup.js"></script>
+  </body>
+</html>

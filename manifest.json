@@ -1,7 +1,7 @@
   {
     "name": "vk music list",
     "version": "1.0",
-    "description": "This extension allows you to take a list of all your vk.com music. You can and sort it alphabetically, with numeration. Then save it how you want.",
+    "description": "This extension allows you to take a list of all your vk.com music. You can sort it alphabetically, with numeration. Then save it how you want.",
     "manifest_version": 2,
     "icons": {
     	"128": "img/icon128.png"
